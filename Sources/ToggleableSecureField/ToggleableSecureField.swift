@@ -43,9 +43,17 @@ public struct ToggleableSecureField: View {
   public var body: some View {
     VStack {
       if isSecure {
-        SecureField(title, text: text)
+        if #available(iOS 15.0, *) {
+          SecureField(title, text: text, prompt: prompt)
+        } else {
+          SecureField(title, text: text)
+        }
       } else {
-        TextField(title, text: text)
+        if #available(iOS 15.0, *) {
+          TextField(title, text: text, prompt: prompt)
+        } else {
+          TextField(title, text: text)
+        }
       }
     }
     .textFieldStyle(
@@ -81,6 +89,9 @@ struct ToggleableSecureField_Previews: PreviewProvider {
 
   static var previews: some View {
     VStack {
+      Text("ToggleableSecureField")
+        .padding()
+        .font(.headline)
       fieldGroup.colorScheme(.light)
       fieldGroup.colorScheme(.dark)
     }
