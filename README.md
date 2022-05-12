@@ -2,11 +2,11 @@
 
 ## Sumary
 
-An alternative to "Password" text fields made 100% with `SwiftUI`. 
+An alternative to "custom password" text fields made 100% with `SwiftUI`. 
 
 ## Description
 
-ToggleableSecureField, a flexible type of text field that relies on both `SwiftUI` native components `TextField` and `SecureField`. In addition, it contains a built-in toggle  that allows to swap between two states. It is the ideal component to let users input their password, showing or hiding the entered content without glitches.
+ToggleableSecureField is a flexible type of text field that relies on both `SwiftUI` native components `TextField` and `SecureField`. In addition, it contains a built-in toggle  that allows to swap between two states. It is the ideal component to let users input their password, showing or hiding the entered content without glitches.
 
 The "show/hide" button takes in an `Image` that can be customized via environment, as well as its tint `Color`.
 
